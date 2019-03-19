@@ -4,10 +4,10 @@ import 'package:helferlein/model/Vector.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 class AddVectorWidget extends StatelessWidget {
-  String xValue;
-  String yValue;
-  String zValue;
-  String nameValue = "a";
+  static String xValue = "";
+  static String yValue = "";
+  static String zValue = "";
+  static String nameValue = "";
 
   @override
   Widget build(BuildContext context) {
