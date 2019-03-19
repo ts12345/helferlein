@@ -1,10 +1,12 @@
 import 'package:scoped_model/scoped_model.dart';
 import 'Point.dart';
 import 'Vector.dart';
+import 'Plane.dart';
 
 class VectorSpaceModel extends Model {
   List<Point> points = [];
   List<Vector> vectors = [];
+  List<Plane> planes = [];
 
   VectorSpaceModel() {
     Point p1 = new Point(1, 2, 3, "A");
@@ -12,7 +14,17 @@ class VectorSpaceModel extends Model {
 
     addPoint(p1);
     addPoint(p2);
+
+    testPlane();
   }
+
+  void testPlane() {
+    Plane p1 = new Plane(1, 2, 3, 4, "P1");
+    Plane p2 = new Plane(4, 3, 2, 1, "P2");
+    addPlane(p1);
+    addPlane(p2);
+  }
+
   void addPoint(Point p) {
     points.add(p);
     print(this.toString() + p.getString());
@@ -22,6 +34,12 @@ class VectorSpaceModel extends Model {
   void addVector(Vector v) {
     vectors.add(v);
     print(this.toString() + v.getString());
+    notifyListeners();
+  }
+
+  void addPlane(Plane p) {
+    planes.add(p);
+    print(this.toString() + p.getString());
     notifyListeners();
   }
 
@@ -35,6 +53,11 @@ class VectorSpaceModel extends Model {
     notifyListeners();
   }
 
+  void deletePlaneAt(int index) {
+    planes.removeAt(index);
+    notifyListeners();
+  }
+
   Point getPointAt(int index) {
     return points.elementAt(index);
   }
@@ -43,7 +66,13 @@ class VectorSpaceModel extends Model {
     return vectors.elementAt(index);
   }
 
+  Plane getPlaneAt(int index) {
+    return planes.elementAt(index);
+  }
+
   List<Point> getPoints() => points;
 
   List<Vector> getVectors() => vectors;
+
+  List<Plane> getPlanes() => planes;
 }
