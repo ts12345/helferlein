@@ -17,12 +17,12 @@ class PlaneListWidget extends StatelessWidget {
 
         List<Widget> planeWidgets = planes.map((plane) {
           return Container(
-            child: new Row(
+            child: Row(
               children: [
-                new Text(planes.indexOf(plane).toString()),
-                new Expanded(child: new PlaneWidget(plane)),
-                new IconButton(
-                  icon: new Icon(Icons.remove_circle_outline),
+                Text(planes.indexOf(plane).toString()),
+                Expanded(child: PlaneWidget(plane)),
+                IconButton(
+                  icon: Icon(Icons.remove_circle_outline),
                   onPressed: () {
                     int index = planes.indexOf(plane);
                     vsm.deletePlaneAt(index);
@@ -33,10 +33,10 @@ class PlaneListWidget extends StatelessWidget {
           );
         }).toList();
 
-        List<Widget> widgets = new List<Widget>();
+        List<Widget> widgets = List<Widget>();
 
         widgets.add(Text("Planes",
-            style: new TextStyle(
+            style: TextStyle(
               fontFamily: "Roboto",
               fontWeight: FontWeight.w600,
               fontSize: 36.0,
@@ -45,12 +45,12 @@ class PlaneListWidget extends StatelessWidget {
         widgets.addAll(planeWidgets);
 
         widgets.add(
-          new Row(
+          Row(
             children: [
-              new Text(""),
-              new Expanded(child: new PlaneEmptyWidget()),
-              new IconButton(
-                icon: new Icon(Icons.add_circle_outline),
+              Text(""),
+              Expanded(child: PlaneEmptyWidget()),
+              IconButton(
+                icon: Icon(Icons.add_circle_outline),
                 onPressed: () {
                   Navigator.push(
                       context,

@@ -12,14 +12,14 @@ class AddVectorWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var nameField = TextField(
-      decoration: new InputDecoration(labelText: "Namen festlegen"),
+      decoration: InputDecoration(labelText: "Namen festlegen"),
       onChanged: (text) {
         nameValue = text;
       },
       keyboardType: TextInputType.text,
     );
     var xField = TextField(
-      decoration: new InputDecoration(labelText: "x1-Wert festlegen"),
+      decoration: InputDecoration(labelText: "x1-Wert festlegen"),
       onChanged: (text) {
         xValue = text;
       },
@@ -29,7 +29,7 @@ class AddVectorWidget extends StatelessWidget {
       ),
     );
     var yField = TextField(
-      decoration: new InputDecoration(labelText: "x2-Wert festlegen"),
+      decoration: InputDecoration(labelText: "x2-Wert festlegen"),
       onChanged: (text) {
         yValue = text;
       },
@@ -39,7 +39,7 @@ class AddVectorWidget extends StatelessWidget {
       ),
     );
     var zField = TextField(
-      decoration: new InputDecoration(labelText: "x3-Wert festlegen"),
+      decoration: InputDecoration(labelText: "x3-Wert festlegen"),
       onChanged: (text) {
         zValue = text;
       },
@@ -58,7 +58,7 @@ class AddVectorWidget extends StatelessWidget {
           vsm.addVector(new Vector(x, y, z, nameValue));
         }
 
-        var button = new Builder(
+        var button = Builder(
           builder: (context) => RaisedButton(
                 child: Text('Vektor anlegen'),
                 onPressed: () {

@@ -6,7 +6,7 @@ class PlaneEmptyWidget extends StatelessWidget {
     return Text(
       "P: x + y + z = 0",
       textAlign: TextAlign.center,
-      style: new TextStyle(
+      style: TextStyle(
         fontFamily: "Roboto",
         fontSize: 24.0,
       ),

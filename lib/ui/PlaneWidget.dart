@@ -12,7 +12,7 @@ class PlaneWidget extends StatelessWidget {
     return Text(
       plane.getString(),
       textAlign: TextAlign.center,
-      style: new TextStyle(
+      style: TextStyle(
         fontFamily: "Roboto",
         fontSize: 24.0,
       ),

@@ -17,12 +17,12 @@ class VectorListWidget extends StatelessWidget {
 
         List<Widget> vectorWidgets = vectors.map((vector) {
           return Container(
-            child: new Row(
+            child: Row(
               children: [
-                new Text(vectors.indexOf(vector).toString()),
-                new Expanded(child: new VectorWidget(vector)),
-                new IconButton(
-                  icon: new Icon(Icons.remove_circle_outline),
+                Text(vectors.indexOf(vector).toString()),
+                Expanded(child: VectorWidget(vector)),
+                IconButton(
+                  icon: Icon(Icons.remove_circle_outline),
                   onPressed: () {
                     int index = vectors.indexOf(vector);
                     vsm.deleteVector(index);
@@ -32,10 +32,10 @@ class VectorListWidget extends StatelessWidget {
             ),
           );
         }).toList();
-        List<Widget> widgets = new List<Widget>();
+        List<Widget> widgets = List<Widget>();
 
         widgets.add(Text("Vektoren",
-            style: new TextStyle(
+            style: TextStyle(
               fontFamily: "Roboto",
               fontWeight: FontWeight.w600,
               fontSize: 36.0,
@@ -44,12 +44,12 @@ class VectorListWidget extends StatelessWidget {
         widgets.addAll(vectorWidgets);
 
         widgets.add(
-          new Row(
+          Row(
             children: [
-              new Text(""),
-              new Expanded(child: new VectorEmptyWidget()),
-              new IconButton(
-                icon: new Icon(Icons.add_circle_outline),
+              Text(""),
+              Expanded(child: VectorEmptyWidget()),
+              IconButton(
+                icon: Icon(Icons.add_circle_outline),
                 onPressed: () {
                   Navigator.push(
                       context,

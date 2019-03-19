@@ -17,12 +17,12 @@ class PointListWidget extends StatelessWidget {
 
         List<Widget> pointWidgets = points.map((point) {
           return Container(
-            child: new Row(
+            child: Row(
               children: [
-                new Text(points.indexOf(point).toString()),
-                new Expanded(child: new PointWidget(point)),
-                new IconButton(
-                  icon: new Icon(Icons.remove_circle_outline),
+                Text(points.indexOf(point).toString()),
+                Expanded(child: PointWidget(point)),
+                IconButton(
+                  icon: Icon(Icons.remove_circle_outline),
                   onPressed: () {
                     int index = points.indexOf(point);
                     vsm.deletePoint(index);
@@ -33,10 +33,10 @@ class PointListWidget extends StatelessWidget {
           );
         }).toList();
 
-        List<Widget> widgets = new List<Widget>();
+        List<Widget> widgets = List<Widget>();
 
         widgets.add(Text("Punkte",
-            style: new TextStyle(
+            style: TextStyle(
               fontFamily: "Roboto",
               fontWeight: FontWeight.w600,
               fontSize: 36.0,
@@ -45,12 +45,12 @@ class PointListWidget extends StatelessWidget {
         widgets.addAll(pointWidgets);
 
         widgets.add(
-          new Row(
+          Row(
             children: [
-              new Text(""),
-              new Expanded(child: new PointEmptyWidget()),
-              new IconButton(
-                icon: new Icon(Icons.add_circle_outline),
+              Text(""),
+              Expanded(child: PointEmptyWidget()),
+              IconButton(
+                icon: Icon(Icons.add_circle_outline),
                 onPressed: () {
                   Navigator.push(
                       context,

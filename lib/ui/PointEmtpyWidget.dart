@@ -9,7 +9,7 @@ class PointEmptyWidget extends StatelessWidget {
     return Text(
         "(x1|x2|x3)",
         textAlign: TextAlign.center,
-        style: new TextStyle(fontFamily: "Roboto", fontSize: 24.0, ),
+        style: TextStyle(fontFamily: "Roboto", fontSize: 24.0, ),
         );
   }
 }

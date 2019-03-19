@@ -13,7 +13,7 @@ class PointWidget extends StatelessWidget {
     return Text(
         point.getString(),
         textAlign: TextAlign.center,
-        style: new TextStyle(fontFamily: "Roboto", fontSize: 24.0, ),
+        style: TextStyle(fontFamily: "Roboto", fontSize: 24.0, ),
         );
   }
 }

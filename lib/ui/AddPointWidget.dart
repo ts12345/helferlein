@@ -13,12 +13,12 @@ class AddPointWidget extends StatelessWidget {
   Widget build(BuildContext context) {
 
     var nameField =  TextField(
-        decoration: new InputDecoration(labelText: "Namen festlegen"),
+        decoration: InputDecoration(labelText: "Namen festlegen"),
         onChanged: (text) { nameValue = text; },
       keyboardType: TextInputType.text,
     );
     var xField = TextField(
-      decoration: new InputDecoration(labelText: "x1-Wert festlegen"),
+      decoration: InputDecoration(labelText: "x1-Wert festlegen"),
       onChanged: (text) { xValue = text; },
       keyboardType: TextInputType.numberWithOptions(
           signed: true,
@@ -26,7 +26,7 @@ class AddPointWidget extends StatelessWidget {
       ),
     );
     var yField = TextField(
-      decoration: new InputDecoration(labelText: "x2-Wert festlegen"),
+      decoration: InputDecoration(labelText: "x2-Wert festlegen"),
       onChanged: (text) { yValue = text; },
       keyboardType: TextInputType.numberWithOptions(
         signed: true,
@@ -34,7 +34,7 @@ class AddPointWidget extends StatelessWidget {
       ),
     );
     var zField = TextField(
-      decoration: new InputDecoration(labelText: "x3-Wert festlegen"),
+      decoration: InputDecoration(labelText: "x3-Wert festlegen"),
       onChanged: (text) { zValue = text; },
       keyboardType: TextInputType.numberWithOptions(
         signed: true,
@@ -51,7 +51,7 @@ class AddPointWidget extends StatelessWidget {
           vsm.addPoint(new Point(x, y, z, nameValue));
         }
 
-        var button = new Builder(
+        var button = Builder(
           builder: (context) => RaisedButton(
                 child: Text('Punkt anlegen'),
                 onPressed: () {

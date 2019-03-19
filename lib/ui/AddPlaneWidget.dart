@@ -13,14 +13,14 @@ class AddPlaneWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var nameField = TextField(
-      decoration: new InputDecoration(labelText: "Namen festlegen"),
+      decoration: InputDecoration(labelText: "Namen festlegen"),
       onChanged: (text) {
         nameValue = text;
       },
       keyboardType: TextInputType.text,
     );
     var aField = TextField(
-      decoration: new InputDecoration(labelText: "a-Wert festlegen"),
+      decoration: InputDecoration(labelText: "a-Wert festlegen"),
       onChanged: (text) {
         aValue = text;
       },
@@ -30,7 +30,7 @@ class AddPlaneWidget extends StatelessWidget {
       ),
     );
     var bField = TextField(
-      decoration: new InputDecoration(labelText: "b-Wert festlegen"),
+      decoration: InputDecoration(labelText: "b-Wert festlegen"),
       onChanged: (text) {
         bValue = text;
       },
@@ -40,7 +40,7 @@ class AddPlaneWidget extends StatelessWidget {
       ),
     );
     var cField = TextField(
-      decoration: new InputDecoration(labelText: "c-Wert festlegen"),
+      decoration: InputDecoration(labelText: "c-Wert festlegen"),
       onChanged: (text) {
         cValue = text;
       },
@@ -50,7 +50,7 @@ class AddPlaneWidget extends StatelessWidget {
       ),
     );
     var dField = TextField(
-      decoration: new InputDecoration(labelText: "d-Wert festlegen"),
+      decoration: InputDecoration(labelText: "d-Wert festlegen"),
       onChanged: (text) {
         dValue = text;
       },
@@ -69,7 +69,7 @@ class AddPlaneWidget extends StatelessWidget {
           vsm.addPlane(new Plane(a, b, c, d, nameValue));
         }
 
-        var button = new Builder(
+        var button = Builder(
           builder: (context) => RaisedButton(
                 child: Text('Plane anlegen'),
                 onPressed: () {

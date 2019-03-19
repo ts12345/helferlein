@@ -9,8 +9,8 @@ class VectorSpaceModel extends Model {
   List<Plane> planes = [];
 
   VectorSpaceModel() {
-    Point p1 = new Point(1, 2, 3, "A");
-    Point p2 = new Point(3, 1, 2, "B");
+    Point p1 = Point(1, 2, 3, "A");
+    Point p2 = Point(3, 1, 2, "B");
 
     addPoint(p1);
     addPoint(p2);
@@ -19,8 +19,8 @@ class VectorSpaceModel extends Model {
   }
 
   void testPlane() {
-    Plane p1 = new Plane(1, 2, 3, 4, "P1");
-    Plane p2 = new Plane(4, 3, 2, 1, "P2");
+    Plane p1 = Plane(1, 2, 3, 4, "P1");
+    Plane p2 = Plane(4, 3, 2, 1, "P2");
     addPlane(p1);
     addPlane(p2);
   }

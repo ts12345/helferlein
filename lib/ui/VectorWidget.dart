@@ -13,7 +13,7 @@ class VectorWidget extends StatelessWidget {
       Text(
         vector.name,
         textAlign: TextAlign.center,
-        style: new TextStyle(
+        style: TextStyle(
           fontFamily: "Roboto",
           fontSize: 55.0,
         ),
@@ -21,7 +21,7 @@ class VectorWidget extends StatelessWidget {
       Text(
         "(",
         textAlign: TextAlign.center,
-        style: new TextStyle(
+        style: TextStyle(
           fontFamily: "Roboto",
           fontSize: 55.0,
         ),
@@ -30,7 +30,7 @@ class VectorWidget extends StatelessWidget {
         Text(
           vector.x.toString(),
           textAlign: TextAlign.center,
-          style: new TextStyle(
+          style: TextStyle(
             fontFamily: "Roboto",
             fontSize: 18.0,
           ),
@@ -38,7 +38,7 @@ class VectorWidget extends StatelessWidget {
         Text(
           vector.y.toString(),
           textAlign: TextAlign.center,
-          style: new TextStyle(
+          style: TextStyle(
             fontFamily: "Roboto",
             fontSize: 18.0,
           ),
@@ -46,7 +46,7 @@ class VectorWidget extends StatelessWidget {
         Text(
           vector.z.toString(),
           textAlign: TextAlign.center,
-          style: new TextStyle(
+          style: TextStyle(
             fontFamily: "Roboto",
             fontSize: 18.0,
           ),
@@ -55,7 +55,7 @@ class VectorWidget extends StatelessWidget {
       Text(
         ")",
         textAlign: TextAlign.center,
-        style: new TextStyle(
+        style: TextStyle(
           fontFamily: "Roboto",
           fontSize: 55.0,
         ),
