@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:helferlein/ui/AddPointWidget.dart';
 import 'package:helferlein/ui/PointListWidget.dart';
+import 'package:helferlein/ui/VectorListWidget.dart';
 
 
 class HomePage extends StatelessWidget {
@@ -18,6 +19,7 @@ class HomePage extends StatelessWidget {
       body: ListView(
           children: <Widget>[
             PointListWidget(),
+            VectorListWidget(),
           ],
         ),
 

@@ -1,8 +1,10 @@
 import 'package:scoped_model/scoped_model.dart';
 import 'Point.dart';
+import 'Vector.dart';
 
 class VectorSpaceModel extends Model {
   List<Point> points = [];
+  List<Vector> vectors = [];
 
   VectorSpaceModel() {
     Point p1 = new Point(1, 2, 3, "A");
@@ -17,8 +19,19 @@ class VectorSpaceModel extends Model {
     notifyListeners();
   }
 
+  void addVector(Vector v) {
+    vectors.add(v);
+    print(this.toString() + v.getString());
+    notifyListeners();
+  }
+
   void deletePoint(int index) {
     points.removeAt(index);
+    notifyListeners();
+  }
+
+  void deleteVector(int index) {
+    vectors.removeAt(index);
     notifyListeners();
   }
 
@@ -26,5 +39,11 @@ class VectorSpaceModel extends Model {
     return points.elementAt(index);
   }
 
+  Vector getVectorAt(int index) {
+    return vectors.elementAt(index);
+  }
+
   List<Point> getPoints() => points;
+
+  List<Vector> getVectors() => vectors;
 }
