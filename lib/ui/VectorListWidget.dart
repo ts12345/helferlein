@@ -20,7 +20,9 @@ class VectorListWidget extends StatelessWidget {
             child: Row(
               children: [
                 Text(vectors.indexOf(vector).toString()),
-                Expanded(child: VectorWidget(vector)),
+                Expanded(child:Text(" ")),
+                VectorWidget(vector),
+                Expanded(child:Text(" ")),
                 IconButton(
                   icon: Icon(Icons.remove_circle_outline),
                   onPressed: () {
