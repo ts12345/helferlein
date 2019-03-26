@@ -11,11 +11,21 @@ class VectorSpaceModel extends Model {
   VectorSpaceModel() {
     testPoints();
     testVectorProdukt();
+    testVector();
     testPlane();
     testAddition();
     testSubtraktion();
   }
-  void testPoints() {
+
+  void testVector() {
+    Vector v1 = Vector(1, 2, 3, "a");
+    Vector v2 = Vector(4, 5, 6, "b");
+
+    addVector(v1);
+    addVector(v2);
+  }
+
+  testPoints() {
     Point p1 = Point(1, 2, 3, "A");
     Point p2 = Point(3, 1, 2, "B");
 
