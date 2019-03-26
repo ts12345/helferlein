@@ -4,11 +4,11 @@ import 'package:helferlein/model/Plane.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 class AddPlaneWidget extends StatelessWidget {
-  String aValue;
-  String bValue;
-  String cValue;
-  String dValue;
-  String nameValue = "E1";
+  static String aValue = "";
+  static String bValue = "";
+  static String cValue = "";
+  static String dValue = "";
+  static String nameValue = "";
 
   @override
   Widget build(BuildContext context) {
