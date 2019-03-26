@@ -16,7 +16,7 @@ class Plane {
         b.toString() +
         "y + " +
         c.toString() +
-        "c = " +
+        "z = " +
         d.toString();
   }
 }
