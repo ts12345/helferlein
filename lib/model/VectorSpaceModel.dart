@@ -12,6 +12,8 @@ class VectorSpaceModel extends Model {
     testPoints();
     testVectorProdukt();
     testPlane();
+    testAddition();
+    testSubtraktion();
   }
   void testPoints() {
     Point p1 = Point(1, 2, 3, "A");
@@ -28,7 +30,7 @@ class VectorSpaceModel extends Model {
     addPlane(p2);
   }
 
-  void testVectorProdukt(){
+  void testVectorProdukt() {
     Vector a = new Vector(1, 2, 3, "A");
     Vector b = new Vector(3, 2, 1, "B");
     addVector(a);
@@ -81,8 +83,8 @@ class VectorSpaceModel extends Model {
     return planes.elementAt(index);
   }
 
-  Vector vectorProdukt(Vector v1, Vector v2){
-    Vector e = new Vector(0, 0, 0, "" );
+  Vector vectorProdukt(Vector v1, Vector v2) {
+    Vector e = new Vector(0, 0, 0, "");
     e.x = (v1.y * v2.z) - (v1.z * v2.y);
     e.y = (v1.z * v2.x) - (v1.x * v2.z);
     e.z = (v1.x * v2.y) - (v1.y * v2.x);
@@ -90,10 +92,41 @@ class VectorSpaceModel extends Model {
     return e;
   }
 
-  double vectorSkalarprodukt(Vector v1, Vector v2){
+  double vectorSkalarprodukt(Vector v1, Vector v2) {
     return (v1.x * v2.x) + (v1.y * v2.y) + (v1.z * v2.z);
   }
 
+  Vector vectorAddition(Vector v1, Vector v2) {
+    Vector e = new Vector(0, 0, 0, "");
+    e.x = v1.x + v2.x;
+    e.y = v1.y + v2.y;
+    e.z = v1.z + v2.z;
+    return (e);
+  }
+
+  void testAddition() {
+    Vector v1 = new Vector(4, 5, 6, "aaa");
+    Vector v2 = new Vector(1, 2, 3, "bbb");
+    addVector(v1);
+    addVector(v2);
+    addVector(vectorAddition(v1, v2));
+  }
+
+  Vector vectorSubtraktion(Vector v1, Vector v2) {
+    Vector e = new Vector(0, 0, 0, "");
+    e.x = v1.x - v2.x;
+    e.y = v1.y - v2.y;
+    e.z = v1.z - v2.z;
+    return (e);
+  }
+
+  void testSubtraktion() {
+    Vector v1 = new Vector(4, 5, 6, "aaa");
+    Vector v2 = new Vector(1, 2, 3, "bbb");
+    addVector(v1);
+    addVector(v2);
+    addVector(vectorSubtraktion(v1, v2));
+  }
 
   List<Point> getPoints() => points;
 
