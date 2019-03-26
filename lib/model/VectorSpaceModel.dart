@@ -9,13 +9,16 @@ class VectorSpaceModel extends Model {
   List<Plane> planes = [];
 
   VectorSpaceModel() {
+    testPoints();
+    testVectorProdukt();
+    testPlane();
+  }
+  void testPoints() {
     Point p1 = Point(1, 2, 3, "A");
     Point p2 = Point(3, 1, 2, "B");
 
     addPoint(p1);
     addPoint(p2);
-
-    testPlane();
   }
 
   void testPlane() {
@@ -23,6 +26,14 @@ class VectorSpaceModel extends Model {
     Plane p2 = Plane(4, 3, 2, 1, "P2");
     addPlane(p1);
     addPlane(p2);
+  }
+
+  void testVectorProdukt(){
+    Vector a = new Vector(1, 2, 3, "A");
+    Vector b = new Vector(3, 2, 1, "B");
+    addVector(a);
+    addVector(b);
+    addVector(vectorProdukt(a, b));
   }
 
   void addPoint(Point p) {
@@ -69,6 +80,20 @@ class VectorSpaceModel extends Model {
   Plane getPlaneAt(int index) {
     return planes.elementAt(index);
   }
+
+  Vector vectorProdukt(Vector v1, Vector v2){
+    Vector e = new Vector(0, 0, 0, "" );
+    e.x = (v1.y * v2.z) - (v1.z * v2.y);
+    e.y = (v1.z * v2.x) - (v1.x * v2.z);
+    e.z = (v1.x * v2.y) - (v1.y * v2.x);
+    e.name = v1.name + "x" + v2.name;
+    return e;
+  }
+
+  double vectorSkalarprodukt(Vector v1, Vector v2){
+    return (v1.x * v2.x) + (v1.y * v2.y) + (v1.z * v2.z);
+  }
+
 
   List<Point> getPoints() => points;
 
