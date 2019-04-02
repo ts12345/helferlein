@@ -35,7 +35,7 @@ class PlaneListWidget extends StatelessWidget {
 
         List<Widget> widgets = List<Widget>();
 
-        widgets.add(Text("Planes",
+        widgets.add(Text("Ebenen",
             style: TextStyle(
               fontFamily: "Roboto",
               fontWeight: FontWeight.w600,
