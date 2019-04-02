@@ -11,12 +11,20 @@ class Plane {
   String getString() {
     return name +
         ": " +
-        a.toString() +
+        value(a) +
         "x + " +
-        b.toString() +
+        value(b) +
         "y + " +
-        c.toString() +
+        value(c) +
         "z = " +
-        d.toString();
+        value(d);
   }
+}
+
+String value(double value) {
+  int a = value.toInt();
+  if (value / a.toDouble() == 1)
+    return a.toString();
+  else
+    return value.toString();
 }
