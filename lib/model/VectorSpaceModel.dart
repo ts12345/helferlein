@@ -11,7 +11,6 @@ class VectorSpaceModel extends Model {
   List<Plane> planes = [];
   List<Line> lines = [];
 
-
   VectorSpaceModel() {
     testPoints();
     testVectorProdukt();
@@ -28,6 +27,12 @@ class VectorSpaceModel extends Model {
 
     addVector(v1);
     addVector(v2);
+
+    Point p1 = Point(1, 2, 3, "A");
+    Point p2 = Point(3, 1, 2, "B");
+    Vector v3 = Vector.connectionVector(p1, p2);
+
+    addVector(v3);
   }
 
   void testLine() {
