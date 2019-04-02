@@ -11,4 +11,8 @@ class Point {
   String getString() {
     return name + "(" + x.toString() + "|" + y.toString() + "|" + z.toString() + ")";
   }
+
+  String getName() {
+    return name;
+  }
 }
