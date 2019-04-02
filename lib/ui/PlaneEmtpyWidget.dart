@@ -9,6 +9,7 @@ class PlaneEmptyWidget extends StatelessWidget {
       style: TextStyle(
         fontFamily: "Roboto",
         fontSize: 24.0,
+        color: Colors.grey,
       ),
     );
   }

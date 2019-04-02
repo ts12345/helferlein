@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-
-
 import 'package:helferlein/model/Point.dart';
 
 class PointWidget extends StatelessWidget {
@@ -11,9 +9,13 @@ class PointWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-        point.getString(),
-        textAlign: TextAlign.center,
-        style: TextStyle(fontFamily: "Roboto", fontSize: 24.0, ),
-        );
+      point.getString(),
+      textAlign: TextAlign.center,
+      style: TextStyle(
+        fontFamily: "Roboto",
+        fontSize: 24.0,
+        color: Colors.grey,
+      ),
+    );
   }
 }

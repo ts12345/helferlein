@@ -9,57 +9,37 @@ class VectorWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        child: Row(children: [
-      Text(
-        vector.name,
-        textAlign: TextAlign.center,
-        style: TextStyle(
-          fontFamily: "Roboto",
-          fontSize: 55.0,
-        ),
-      ),
-      Text(
-        "(",
-        textAlign: TextAlign.center,
-        style: TextStyle(
-          fontFamily: "Roboto",
-          fontSize: 55.0,
-        ),
-      ),
-      Column(children: [
-        Text(
-          vector.x.toString(),
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            fontFamily: "Roboto",
-            fontSize: 18.0,
-          ),
-        ),
-        Text(
-          vector.y.toString(),
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            fontFamily: "Roboto",
-            fontSize: 18.0,
-          ),
-        ),
-        Text(
-          vector.z.toString(),
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            fontFamily: "Roboto",
-            fontSize: 18.0,
-          ),
-        )
-      ]),
-      Text(
-        ")",
-        textAlign: TextAlign.center,
-        style: TextStyle(
-          fontFamily: "Roboto",
-          fontSize: 55.0,
-        ),
-      ),
-    ]));
+      child: Row(children: [
+
+        getVectorText(30.0,vector.name),
+        getVectorText(55.0,"("),
+
+        Column(children: [
+          getVectorText(18.0,value(vector.x)),
+          getVectorText(18.0,value(vector.y)),
+          getVectorText(18.0,value(vector.z)),
+        ]),
+
+        getVectorText(55.0,")"),
+      ])
+    );
   }
+}
+
+Text getVectorText (double size, String text){
+  return Text(
+    text,
+    textAlign: TextAlign.center,
+    style: TextStyle(
+      fontFamily: "Roboto",
+      fontSize: size,
+      color: Colors.grey,
+    ),
+  );
+}
+
+String value (double value){
+  int a = value.toInt();
+  if(value/a.toDouble() == 1) return a.toString();
+  else return value.toString();
 }

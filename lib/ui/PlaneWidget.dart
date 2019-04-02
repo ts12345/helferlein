@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:helferlein/model/Plane.dart';
 
 class PlaneWidget extends StatelessWidget {
@@ -15,6 +14,7 @@ class PlaneWidget extends StatelessWidget {
       style: TextStyle(
         fontFamily: "Roboto",
         fontSize: 24.0,
+        color: Colors.grey,
       ),
     );
   }
