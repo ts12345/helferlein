@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-
 import 'package:helferlein/ui/AddPointWidget.dart';
+import 'package:helferlein/ui/AnimateExpanded.dart';
+import 'package:helferlein/ui/PlaneListWidget.dart';
 import 'package:helferlein/ui/PointListWidget.dart';
 import 'package:helferlein/ui/VectorListWidget.dart';
-import 'package:helferlein/ui/PlaneListWidget.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -14,6 +14,26 @@ class HomePage extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
+          new SingleChildScrollView(
+            child: new SafeArea(
+              child: new Material(
+                child: new ExpansionList(
+                  [
+                    new ListItem(
+                        title: "Title 1",
+                        subtitle: "Subtitle 1",
+                        bodyBuilder: (context) => new Text("Body 1")),
+                    new ListItem(
+                        title: "Title 2",
+                        subtitle: "Subtitle 2",
+                        bodyBuilder: (context) => new Text("Body 1"),
+                        isExpandedInitially: true)
+                  ],
+                ),
+              ),
+            ),
+          ),
+          spaceLine(20.0),
           PointListWidget(),
           spaceLine(20.0),
           VectorListWidget(),
@@ -34,7 +54,7 @@ class HomePage extends StatelessWidget {
   }
 }
 
-Text spaceLine(double size){
+Text spaceLine(double size) {
   return Text(
     " ",
     style: TextStyle(
