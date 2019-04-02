@@ -1,3 +1,5 @@
+import "Point.dart";
+
 class Vector {
   double x;
   double y;
@@ -20,5 +22,12 @@ class Vector {
 
   String getName() {
     return name;
+  }
+
+  Vector.connectionVector(Point a, Point b) {
+    this.x = b.x - a.x;
+    this.y = b.y - a.y;
+    this.z = b.z - a.z;
+    this.name = a.getName() + b.getName();
   }
 }
