@@ -1,18 +1,23 @@
 import 'package:scoped_model/scoped_model.dart';
+
+import 'Line.dart';
+import 'Plane.dart';
 import 'Point.dart';
 import 'Vector.dart';
-import 'Plane.dart';
 
 class VectorSpaceModel extends Model {
   List<Point> points = [];
   List<Vector> vectors = [];
   List<Plane> planes = [];
+  List<Line> lines = [];
+
 
   VectorSpaceModel() {
     testPoints();
     testVectorProdukt();
     testVector();
     testPlane();
+    testLine();
     testAddition();
     testSubtraktion();
   }
@@ -23,6 +28,17 @@ class VectorSpaceModel extends Model {
 
     addVector(v1);
     addVector(v2);
+  }
+
+  void testLine() {
+    Vector v1 = Vector(1, 2, 3, "a");
+    Vector v2 = Vector(4, 5, 6, "b");
+    Point p1 = Point(1, 2, 3, "A");
+    Point p2 = Point(3, 1, 2, "B");
+    Line l1 = new Line.connection(p1, p2, "X");
+    Line l2 = new Line(v1, v2, "Y");
+    addLine(l1);
+    addLine(l2);
   }
 
   testPoints() {
@@ -68,6 +84,12 @@ class VectorSpaceModel extends Model {
 
   void deletePoint(int index) {
     points.removeAt(index);
+    notifyListeners();
+  }
+
+  void addLine(Line l) {
+    lines.add(l);
+    print(this.toString() + l.getString());
     notifyListeners();
   }
 
