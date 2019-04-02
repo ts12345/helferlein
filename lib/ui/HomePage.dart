@@ -15,8 +15,11 @@ class HomePage extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           PointListWidget(),
+          spaceLine(20.0),
           VectorListWidget(),
+          spaceLine(20.0),
           PlaneListWidget(),
+          spaceLine(60.0),
         ],
       ),
       floatingActionButton: FloatingActionButton(
@@ -29,4 +32,13 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
+}
+
+Text spaceLine(double size){
+  return Text(
+    " ",
+    style: TextStyle(
+      fontSize: size,
+    ),
+  );
 }
