@@ -17,8 +17,17 @@ class ListItem {
 
   ExpansionPanelHeaderBuilder get headerBuilder =>
       (context, isExpanded) => new Row(children: [
-            new SizedBox(width: 100.0, child: new Text(title)),
-            new Text(subtitle)
+            new Expanded(child:Text(" ")),
+            new Text(
+              title,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontFamily: "Roboto",
+                fontSize: 30.0,
+                fontWeight: FontWeight.bold,
+              )
+            ),
+            new Expanded(child:Text(" ")),
           ]);
 }
 
