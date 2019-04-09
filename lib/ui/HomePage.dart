@@ -20,25 +20,23 @@ class HomePage extends StatelessWidget {
                 child: new ExpansionList(
                   [
                     new ListItem(
-                        title: "Title 1",
-                        subtitle: "Subtitle 1",
-                        bodyBuilder: (context) => new Text("Body 1")),
+                        title: "Punkte",
+                        subtitle: "",
+                        bodyBuilder: (context) => PointListWidget()),
                     new ListItem(
-                        title: "Title 2",
-                        subtitle: "Subtitle 2",
-                        bodyBuilder: (context) => new Text("Body 1"),
-                        isExpandedInitially: true)
+                        title: "Vektoren",
+                        subtitle: "",
+                        bodyBuilder: (context) => VectorListWidget()),
+                    new ListItem(
+                        title: "Ebenen",
+                        subtitle: "",
+                        bodyBuilder: (context) => PlaneListWidget())
                   ],
                 ),
               ),
             ),
           ),
-          spaceLine(20.0),
-          PointListWidget(),
-          spaceLine(20.0),
-          VectorListWidget(),
-          spaceLine(20.0),
-          PlaneListWidget(),
+
           spaceLine(60.0),
         ],
       ),
