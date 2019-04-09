@@ -19,7 +19,6 @@ class PointListWidget extends StatelessWidget {
           return Container(
             child: Row(
               children: [
-                Text(points.indexOf(point).toString()),
                 Expanded(child: PointWidget(point)),
                 IconButton(
                   icon: Icon(Icons.remove_circle_outline),
@@ -35,12 +34,6 @@ class PointListWidget extends StatelessWidget {
 
         List<Widget> widgets = List<Widget>();
 
-        widgets.add(Text("Punkte",
-            style: TextStyle(
-              fontFamily: "Roboto",
-              fontWeight: FontWeight.w600,
-              fontSize: 36.0,
-            )));
 
         widgets.addAll(pointWidgets);
 

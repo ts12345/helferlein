@@ -19,7 +19,6 @@ class PlaneListWidget extends StatelessWidget {
           return Container(
             child: Row(
               children: [
-                Text(planes.indexOf(plane).toString()),
                 Expanded(child: PlaneWidget(plane)),
                 IconButton(
                   icon: Icon(Icons.remove_circle_outline),
@@ -35,12 +34,6 @@ class PlaneListWidget extends StatelessWidget {
 
         List<Widget> widgets = List<Widget>();
 
-        widgets.add(Text("Ebenen",
-            style: TextStyle(
-              fontFamily: "Roboto",
-              fontWeight: FontWeight.w600,
-              fontSize: 36.0,
-            )));
 
         widgets.addAll(planeWidgets);
 

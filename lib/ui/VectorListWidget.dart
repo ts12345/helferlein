@@ -19,8 +19,12 @@ class VectorListWidget extends StatelessWidget {
           return Container(
             child: Row(
               children: [
-                Text(vectors.indexOf(vector).toString()),
-                Expanded(child:Text(" ")),
+                Expanded(child:Text(
+                    " ",
+                  style: TextStyle(
+                    fontSize: 70.0,
+                  )
+                )),
                 VectorWidget(vector),
                 Expanded(child:Text(" ")),
                 IconButton(
@@ -36,12 +40,6 @@ class VectorListWidget extends StatelessWidget {
         }).toList();
         List<Widget> widgets = List<Widget>();
 
-        widgets.add(Text("Vektoren",
-            style: TextStyle(
-              fontFamily: "Roboto",
-              fontWeight: FontWeight.w600,
-              fontSize: 36.0,
-            )));
 
         widgets.addAll(vectorWidgets);
 
