@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:helferlein/ui/AddPointWidget.dart';
 import 'package:helferlein/ui/AnimateExpanded.dart';
+import 'package:helferlein/ui/LineListWidget.dart';
 import 'package:helferlein/ui/PlaneListWidget.dart';
 import 'package:helferlein/ui/PointListWidget.dart';
 import 'package:helferlein/ui/VectorListWidget.dart';
+
 
 class HomePage extends StatelessWidget {
   @override
@@ -30,7 +32,11 @@ class HomePage extends StatelessWidget {
                     new ListItem(
                         title: "Ebenen",
                         subtitle: "",
-                        bodyBuilder: (context) => PlaneListWidget())
+                        bodyBuilder: (context) => PlaneListWidget()),
+                    new ListItem(
+                        title: "Linien",
+                        subtitle: "",
+                        bodyBuilder: (context) => LineListWidget())
                   ],
                 ),
               ),

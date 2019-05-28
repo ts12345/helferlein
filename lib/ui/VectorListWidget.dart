@@ -19,12 +19,7 @@ class VectorListWidget extends StatelessWidget {
           return Container(
             child: Row(
               children: [
-                Expanded(child:Text(
-                    " ",
-                  style: TextStyle(
-                    fontSize: 70.0,
-                  )
-                )),
+                Expanded(child:Text(" ")),
                 VectorWidget(vector),
                 Expanded(child:Text(" ")),
                 IconButton(
@@ -46,8 +41,9 @@ class VectorListWidget extends StatelessWidget {
         widgets.add(
           Row(
             children: [
-              Text(""),
-              Expanded(child: VectorEmptyWidget()),
+              Expanded(child:Text(" ")),
+              VectorEmptyWidget(),
+              Expanded(child:Text(" ")),
               IconButton(
                 icon: Icon(Icons.add_circle_outline),
                 onPressed: () {
@@ -68,3 +64,4 @@ class VectorListWidget extends StatelessWidget {
     );
   }
 }
+
