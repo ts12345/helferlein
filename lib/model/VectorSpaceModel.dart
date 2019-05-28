@@ -13,12 +13,13 @@ class VectorSpaceModel extends Model {
 
   VectorSpaceModel() {
     testPoints();
-    testVectorProdukt();
     testVector();
     testPlane();
     testLine();
-    testAddition();
-    testSubtraktion();
+    //testAddition();
+    //testSubtraktion();
+    //testVectorProdukt();
+
   }
 
   void testVector() {
@@ -170,4 +171,6 @@ class VectorSpaceModel extends Model {
   List<Vector> getVectors() => vectors;
 
   List<Plane> getPlanes() => planes;
+
+  List<Line> getLines() => lines;
 }
